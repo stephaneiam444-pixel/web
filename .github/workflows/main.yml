@@ -12,6 +12,14 @@ jobs:
           fetch-depth: 1
           ref: main   # ou master si ta branche principale s'appelle master
 
+      - name: 📂 Install dependencies
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  
+
+      - name: 📂 Install npm dependencies
+        run: npm install
+
       # Étape 2 : Déployer les fichiers via FTP sécurisé
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
@@ -20,8 +28,9 @@ jobs:
           username: quaiantiquerestaurant2
           password: ${{ secrets.ftp_password }}
           server-dir: /www/
-          protocol: ftps
-          security: strict
+          local-dir: "Quai Antique restaurant front"
+          protocol: ftp
+          security: loose
           exclude: |
             **/.git*
             **/.git*/**

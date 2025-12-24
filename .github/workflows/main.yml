@@ -28,7 +28,7 @@ jobs:
           username: quaiantiquerestaurant2
           password: ${{ secrets.ftp_password }}
           server-dir: /www/
-          local-dir: "Quai Antique restaurant front"
+          local-dir: "Quai Antique restaurant front/"
           protocol: ftp
           security: loose
           exclude: |

@@ -17,16 +17,17 @@ jobs:
       run: npm install
     
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: andrewwilkinson/ftp-action@v1
       with:
-        server: ftp-quaiantiquerestaurant.alwaysdata.net
+        host: ftp-quaiantiquerestaurant.alwaysdata.net
         username: quaiantiquerestaurant
         password: ${{ secrets.ftp_password }}
+        protocol: ftps
+        local-dir: ./
+        server-dir: /www/
         exclude: |
-          **/.git*
+          .git*
           **/.git*/**
           **/node_modules/bootstrap/scss/**
           **/node_modules/bootstrap/js/**
-          **/node_modules/bootstrap-icons/icons/**  
-        server-dir: /www/
-        secure: true   # <-- correction pour FTPS
+          **/node_modules/bootstrap-icons/icons/**

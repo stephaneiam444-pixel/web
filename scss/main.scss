@@ -1,0 +1,114 @@
+@import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
+@import "custom";
+
+html {
+    position:relative;
+    min-height: 100%;
+}
+
+main{
+    margin-bottom: 270px;
+}
+
+footer.footer {
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+p {
+    font-family: $font-family-serif;
+    font-size: 18px;  
+}
+
+.hero-scene {
+    position: relative;
+    margin-bottom: 15px;
+    &::before {
+        content:"";
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/christmas-wallpaper.jpg);
+        background-size: cover;
+        filter: brightness(0.3);
+    }
+
+    * {
+        //Positionner les elements devant le ::before
+        position: relative;
+    }
+
+    .hero-scene-content {
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+ .text-justify{
+    text-align:justify;
+ }
+
+ .image-card{
+    position: relative;
+    height: 250px; // uniformise la hauteur
+
+    &:hover{
+        .titre-image,
+        .action-image-buttons{
+            opacity: 1;
+        }
+        img{
+            filter: brightness(0.3);
+
+        }
+
+    }
+    img{
+        width: 100%;
+        height: 100%;       // ← force l'image à remplir la carte
+        object-fit: cover;  // ← garde le ratio
+        transition: all 0.3s;
+
+    }
+
+    .titre-image{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: all 0.3s;
+
+    }
+
+    .action-image-buttons{
+        position: absolute;
+        top:0%;
+        left:0%;
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        opacity: 0;
+        transition: all 0.3s;
+    }
+ }
+
+ .form-label {
+    color: $primary;
+}
+
+.allreservations{
+   a{
+   display: block;
+   color: $black;
+   padding: 10px;
+   } 
+}

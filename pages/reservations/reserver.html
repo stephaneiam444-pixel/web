@@ -1,0 +1,87 @@
+<div class="hero-scene text-center text-white">
+<div class="hero-scene-content">
+<h1>Ma réservation</h1>
+</div>
+</div>
+
+<div class="container">
+<form>
+  <div class="mb-3">
+    <label for="NomInput" class="form-label">Nom</label>
+    <input disabled type="text" class="form-control" id="NomInput" placeholder="Votre nom" value="john">
+    </div>
+    <div class="mb-3">
+    <label for="PrenomInput" class="form-label">Prenom</label>
+    <input disabled type="text" class="form-control" id="PrenomInput" placeholder="Votre prenom"value="doe">
+    </div>
+    <div class="mb-3">
+    <label for="AllergieInput" class="form-label">Allergie</label>
+    <input type="text" class="form-control" id="AllergieInput" placeholder="Vos allergies(fruits de mer, arachides..)"value="Cacahouetes">
+    </div>
+    <div class="mb-3">
+    <label for="NbcConvivesInput" class="form-label">Nombre de convives habituel</label>
+    <input type="number" class="form-control" id="NbConvivesInput" placeholder="Combien vous étes habituellement ?" value="4">
+    </div>
+    <div class="mb-3">
+    <label for="DateInput" class="form-label">Date</label>
+    <input type="date" class="form-control" id="DateInput">
+    </div>
+    <div class="mb-3">
+    <div class="form-check">
+  <input class="form-check-input" type="radio" name="serviceChoisi" id="midiRadio">
+  <label class="form-check-label" for="midiRadio">
+    Midi
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="serviceChoisi" id="soirRadio" checked>
+  <label class="form-check-label" for="soirRadio">
+    Soir
+  </label>
+</div>
+    </div>
+    <div class="mb-3">
+        <label for="selectHour" class="form-label">Heure</label>
+    <select class="form-select"id="selectHour">
+  <option>19:30</option>
+  <option>19:45</option>
+  <option>20:00</option>
+  <option>20:15</option>
+  <option>20:30</option>
+  <option>20:45</option>
+  <option>21:00</option>
+  </select>
+    </div>
+  <div class="text-center">
+  <button type="submit" class="btn btn-primary">Réserver</button>
+  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#annulerModal">
+  Annuler
+</button>
+
+  </div>
+</form>
+<!-- Modal -->
+<div class="modal fade" id="annulerModal" tabindex="-1" aria-labelledby="annulerModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <div class="modal-header">
+        <h5 class="modal-title" id="annulerModalLabel">Confirmer l'annulation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+
+      <div class="modal-body">
+        Êtes-vous sûr de vouloir annuler votre réservation ?
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Retour</button>
+        <button type="button" class="btn btn-danger" id="confirmCancel">Oui, annuler</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+ </div>
+   

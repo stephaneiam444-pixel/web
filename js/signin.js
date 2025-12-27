@@ -2,7 +2,6 @@ const mailInput = document.getElementById("EmailInput");
 const passwordInput = document.getElementById("PasswordInput");
 const btnSingin = document.getElementById("btnSignin");
 const signinForm = document.getElementById("signinForm");
-
 btnSingin.addEventListener("click",checkCredentials);
 
 function checkCredentials(){
